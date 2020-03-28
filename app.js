@@ -1,5 +1,5 @@
 var id = 0;
-
+// pentru a genera id-uri, am decis sa folosesc o functie care sa incrementeze un contor 
 function generateNewId() {
     id = id + 1;
     return id;
@@ -68,6 +68,13 @@ function displayComments(comments, containerNode) {
 
     function addDeleteBtn(text, commentId) {
         const deleteBtn = document.createElement("button");
+        deleteBtn.style.backgroundColor = "red";
+        deleteBtn.style.padding = "7px";
+        deleteBtn.style.width = "120px";
+        deleteBtn.style.margin = "0px 0px 0px 200px";
+        deleteBtn.style.color = "white";
+        deleteBtn.style.borderRadius = "8px";
+        deleteBtn.style.fontSize = "large";
         deleteBtn.innerHTML = text;
         deleteBtn.addEventListener('click', function() {
             console.log(commentId);
